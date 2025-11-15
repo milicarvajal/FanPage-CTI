@@ -1,0 +1,262 @@
+/* ================================
+   RESET BÁSICO
+================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, Arial, sans-serif;
+    background: white;
+    color: black;
+    font-size: 16px;
+}
+
+/* MODO OSCURO */
+body.oscuro {
+    background: #1c1c1c;
+    color: white;
+}
+
+/* TIPOGRAFÍA ALTERNATIVA (botón Cambiar tipografía) */
+body.mono {
+    font-family: "Courier New", monospace;
+}
+
+
+/* ================================
+   HEADER Y MENÚ
+================================== */
+.header {
+    border-bottom: 2px solid #b30059;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Fondo del header en modo oscuro */
+body.oscuro .header {
+    background: #2b2b2b;
+    border-color: #ff66aa;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Barra de navegación */
+.menu {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Links del menú */
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+/* Links en modo oscuro */
+body.oscuro .menu a {
+    color: white;
+}
+
+/* Hover básico */
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor de botones del header */
+.botones {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+}
+
+/* Estilo general de los botones del header */
+.botones button {
+    background: #b30059;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.botones button:hover {
+    filter: brightness(0.9);
+}
+
+
+/* ================================
+   CONTENIDO PRINCIPAL
+================================== */
+.container {
+    text-align: center;
+    margin: 24px auto;
+    max-width: 400px;
+}
+
+/* Foto redonda */
+.fotomili {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #b30059;
+    object-fit: cover;
+}
+
+/* Nombre principal */
+.nombre {
+    margin: 12px 0 4px;
+}
+
+/* Rol / título */
+.rol {
+    color: #b30059;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+
+/* ================================
+   INFORMACIÓN PERSONAL
+================================== */
+.personal-info {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 12px;
+    border: 2px solid #b30059;
+    border-radius: 8px;
+    background: white;
+}
+
+/* En modo oscuro, que la tarjeta no quede blanca pura */
+body.oscuro .personal-info {
+    background: #2a2a2a;
+    border-color: #ff66aa;
+}
+
+.personal-info h2 {
+    margin-bottom: 8px;
+}
+
+.personal-info p {
+    margin-bottom: 4px;
+}
+
+
+/* ================================
+   PROYECTOS
+================================== */
+.proyecto-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 16px;
+    border: 2px solid #b30059;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+}
+
+body.oscuro .proyecto-card {
+    background: #2a2a2a;
+    border-color: #ff66aa;
+}
+
+.proyecto-card h3 {
+    margin-bottom: 8px;
+}
+
+.proyecto-card p {
+    margin-bottom: 10px;
+}
+
+
+/* Botón reutilizado (proyectos y formulario) */
+.btn-enviar {
+    display: inline-block;
+    margin-top: 8px;
+    background: #b30059;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-enviar:hover {
+    filter: brightness(0.9);
+}
+
+
+/* ================================
+   FORMULARIO DE CONTACTO
+================================== */
+#form-contacto {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#form-contacto label {
+    display: block;
+    margin: 8px 0 4px;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #b30059;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+#mensaje-form {
+    min-height: 1.2em;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   RESPONSIVE (CELULAR)
+================================== */
+@media (max-width:640px) {
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .botones {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .fotomili {
+        width: 120px;
+        height: 120px;
+    }
+
+    .personal-info,
+    .proyecto-card {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}

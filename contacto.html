@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Contacto</h1>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="misproyectos.html">Mis proyectos</a>
+            <a href="contacto.html">Contacto</a>
+
+            <div class="botones">
+                <button id="btn-tema">Modo Claro / Oscuro</button>
+                <button id="btn-fuente">Cambiar tipografía</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Escribime</h2>
+
+        <form id="form-contacto">
+            <label>Nombre</label>
+            <input id="nombre">
+
+            <label>Email</label>
+            <input id="email" type="email">
+
+            <label>Mensaje</label>
+            <textarea id="mensaje" rows="4"></textarea>
+
+            <button class="btn-enviar" type="submit">Enviar</button>
+
+            <p id="mensaje-form"></p>
+        </form>
+    </main>
+
+</body>
+
+</html>
